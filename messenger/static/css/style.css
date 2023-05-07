@@ -1,0 +1,38 @@
+html,body{
+    min-height: 100vh;
+    height: 1px;
+    background:red;
+}
+
+.user-list{
+    height: 70px;
+    margin-bottom:10px;
+    border:1px solid gray;
+}
+
+a {
+    text-decoration: none !important;
+    color:black !important;
+}
+
+a:hover .user-list{
+    background-color: black;
+    color:white;
+}
+
+.chat{
+    border: 1px solid gray;
+    height: 70vh;
+    overflow-y: scroll;
+}
+
+div.message{
+    max-width: 40vw;
+    height: auto;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.no_read{
+    background: gray;
+}

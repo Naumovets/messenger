@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form class="position-absolute top-50 start-50 translate-middle p-2 col-10 col-md-8 col-lg-4" method="post">
+        <h1>Авторизация</h1>
+        {% csrf_token %}
+        {% for f in form %}
+          <div class="mb-3">
+            <label for="{{ f.id_for_label }}" class="form-label">{{f.label}}</label>
+            {{ f }}
+          </div>
+          <div class="form-error text-danger">{{f.errors}}</div>
+        {% endfor %}
+        <div class="form-error text-danger">{{ form.non_field_errors }}</div>
+        <button type="submit" class="btn btn-primary">Войти</button>
+        <a class="ms-2" href="{% url 'register' %}">Нет аккаунта?</a>
+    </form>
+
+
+
+{% endblock %}
